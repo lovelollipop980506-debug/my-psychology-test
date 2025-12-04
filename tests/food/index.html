@@ -195,32 +195,34 @@
 
             <!-- 결과 화면 -->
             <div id="result-screen" class="screen">
-                <img id="result-img" class="result-img" src="" alt="Result Image"
-                    style="width: 200px; height: 200px; object-fit: cover; border-radius: 20px; margin-bottom: 20px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
-                <h2 class="result-name" id="result-name">결과 이름</h2>
-                <h3 class="result-subtitle" id="result-title"
-                    style="font-size: 1.2rem; color: #555; margin-bottom: 15px;"></h3>
-                <p class="result-desc" id="result-desc">결과 설명</p>
-                <div class="result-quote" id="result-quote"
-                    style="background: #fff8e1; padding: 10px; border-radius: 10px; font-weight: bold; margin-bottom: 20px; color: #d35400;">
-                </div>
+                <div id="result-container">
+                    <h2 id="user-name-header" style="font-size: 1.5rem; color: #333; margin-bottom: 20px;">결과</h2>
+                    <img id="result-img" class="result-img" src="" alt="Result Image"
+                        style="width: 200px; height: 200px; object-fit: cover; border-radius: 20px; margin-bottom: 20px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+                    <h2 class="result-name" id="result-name">결과 이름</h2>
+                    <h3 class="result-subtitle" id="result-title"
+                        style="font-size: 1.2rem; color: #555; margin-bottom: 15px;"></h3>
+                    <p class="result-desc" id="result-desc">결과 설명</p>
+                    <div class="result-quote" id="result-quote"
+                        style="background: #fff8e1; padding: 10px; border-radius: 10px; font-weight: bold; margin-bottom: 20px; color: #d35400;">
+                    </div>
 
-                <div class="match-box">
-                    <div style="display: flex; justify-content: space-around;">
-                        <div>
-                            <div class="match-title">환상의 짝꿍</div>
-                            <div class="match-item" id="result-match">음식 이름</div>
-                        </div>
-                        <div>
-                            <div class="match-title">환장의 짝꿍</div>
-                            <div class="match-item" id="result-unmatch">음식 이름</div>
+                    <div class="match-box">
+                        <div style="display: flex; justify-content: space-around;">
+                            <div>
+                                <div class="match-title">환상의 짝꿍</div>
+                                <div class="match-item" id="result-match">음식 이름</div>
+                            </div>
+                            <div>
+                                <div class="match-title">환장의 짝꿍</div>
+                                <div class="match-item" id="result-unmatch">음식 이름</div>
+                            </div>
                         </div>
                     </div>
-                </div>
 
-                <button class="btn" onclick="shareResult()">결과 공유하기</button>
-                <button class="btn" style="background: #666 !important; margin-top: 10px;"
-                    onclick="location.href='../../index.html'">다른 테스트 하러가기</button>
+                    <!-- 버튼 영역: JavaScript로 동적 렌더링 -->
+                    <div id="button-container"></div>
+                </div>
             </div>
         </main>
     </div>
