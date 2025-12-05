@@ -1,0 +1,265 @@
+:root {
+    --primary-blue: #5865F2;
+    /* 디스코드 블루 느낌 */
+    --bg-gray: #F2F4F7;
+    --card-white: #FFFFFF;
+    --text-dark: #2f3136;
+    --text-gray: #72767d;
+    --border-color: #e3e5e8;
+    --point-red: #ed4245;
+    --point-green: #3ba55c;
+    --point-yellow: #fee75c;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, Roboto, sans-serif;
+    background-color: var(--bg-gray);
+    color: var(--text-dark);
+}
+
+/* 상단 헤더 */
+.top-header {
+    background: #fff;
+    border-bottom: 1px solid var(--border-color);
+    padding: 10px 20px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.header-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: #2c2f33;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.header-right {
+    display: flex;
+    gap: 10px;
+}
+
+.login-btn {
+    background-color: var(--primary-blue);
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 0.9rem;
+}
+
+.theme-btn {
+    background: #f2f3f5;
+    border: none;
+    padding: 8px;
+    position: relative;
+}
+
+.circle-img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: #eee;
+    margin: 0 auto 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.8rem;
+    border: 3px solid white;
+    box-shadow: 0 0 0 2px var(--primary-blue);
+}
+
+.popular-name {
+    font-size: 0.8rem;
+    font-weight: bold;
+    color: #333;
+}
+
+.popular-tag {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: var(--point-green);
+    color: white;
+    font-size: 0.6rem;
+    padding: 2px 4px;
+    border-radius: 4px;
+}
+
+/* 게임 카드 스타일 */
+.game-card {
+    background: white;
+    border-radius: 12px;
+    border: 1px solid var(--border-color);
+    margin-bottom: 15px;
+    overflow: hidden;
+    transition: transform 0.2s, box-shadow 0.2s;
+    position: relative;
+}
+
+.game-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    border-color: var(--primary-blue);
+}
+
+.card-header {
+    padding: 12px 20px;
+    background: #f8f9fa;
+    border-bottom: 1px solid #eee;
+    font-size: 0.85rem;
+    color: #666;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.status-dot {
+    width: 8px;
+    height: 8px;
+    background: var(--point-green);
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.status-dot.green {
+    background: var(--point-green);
+}
+
+.status-dot.red {
+    background: var(--point-red);
+}
+
+.card-icon-right {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    width: 60px;
+    height: 60px;
+}
+
+.card-body {
+    padding: 20px;
+}
+
+.card-title {
+    font-size: 1.2rem;
+    margin-bottom: 8px;
+    color: #2c2f33;
+}
+
+.card-desc {
+    font-size: 0.95rem;
+    color: #555;
+    margin-bottom: 15px;
+    line-height: 1.5;
+}
+
+.card-tags {
+    display: flex;
+    gap: 5px;
+}
+
+.tag {
+    font-size: 0.8rem;
+    padding: 4px 8px;
+    border-radius: 4px;
+    background: #eee;
+    color: #555;
+}
+
+.tag.red {
+    background: #fee2e2;
+    color: #ef4444;
+}
+
+.tag.blue {
+    background: #dbeafe;
+    color: #2563eb;
+}
+
+.card-footer {
+    padding: 15px 20px;
+    background: #fff;
+    border-top: 1px solid #eee;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.badge {
+    font-size: 0.8rem;
+    font-weight: bold;
+    padding: 4px 8px;
+    border-radius: 4px;
+}
+
+.badge.red {
+    background: #fff5f5;
+    color: var(--point-red);
+    border: 1px solid #fed7d7;
+}
+
+.badge.blue {
+    background: #ebf8ff;
+    color: #3182ce;
+    border: 1px solid #bee3f8;
+}
+
+.start-btn {
+    background: var(--primary-blue);
+    color: white;
+    border: none;
+    padding: 8px 20px;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: background 0.2s;
+}
+
+.start-btn:hover {
+    background: #4752c4;
+}
+
+/* 반응형 처리 */
+@media (max-width: 768px) {
+    .main-layout {
+        flex-direction: column;
+        padding: 0 10px;
+    }
+
+    .sidebar {
+        width: 100%;
+        order: 2;
+        /* 모바일에서는 아래로 */
+    }
+
+    .content-area {
+        order: 1;
+    }
+
+    .card-icon-right {
+        width: 40px;
+        height: 40px;
+    }
+}
